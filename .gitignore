@@ -1,0 +1,10 @@
+MagicTunnel/obj
+MagicTunnel/bin
+MagicTunnBll/bin
+MagicTunnBll/obj
+MagicTunnelModel/obj
+MagicTunnelModel/bin
+tunnel/
+TunnelWindowsService/obj
+TunnelWindowsService/bin
+.vs
