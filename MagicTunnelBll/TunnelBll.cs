@@ -15,7 +15,6 @@ namespace MagicTunnBll
         public List<TunnelServe> ServeList
         {
             get => this.serveList;
-            //set => this.serveList = value;
         }
 
         //当前路径
@@ -62,7 +61,6 @@ namespace MagicTunnBll
             return serveNameList;
         }
 
-
         public void UpdateCurrentEnableProcess()
         {
             foreach (var item in ServeList)
@@ -98,6 +96,20 @@ namespace MagicTunnBll
         {
             TunnelServe tsByName = ServeList.First(ts => ts.ServeName == serveName);
             tsByName.DeleteProcess();
+        }
+
+        /// <summary>
+        /// 关闭服务
+        /// </summary>
+        public void CloseServe()
+        {
+            foreach (var item in ServeList)
+            {
+                if (!item.Enable)
+                {
+                    item.DeleteProcess();
+                }
+            }
         }
     }
 }

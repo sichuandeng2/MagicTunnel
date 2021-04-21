@@ -71,6 +71,8 @@ namespace TunnelWindowsService
         private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             tb.UpdateCurrentEnableProcess();
+            tb.CloseServe();
+            OnStop();
         }
     }
 }

@@ -90,13 +90,13 @@ namespace TunnelCode
                 {
                     if (item.Enable)
                     {
-                        pictureBoxMstsc.Image = Image.FromFile(Path.Combine(curDic, "images", $"{item.ServeName}Green.png"));
+                        pictureBoxMstsc.Image = Image.FromFile(Path.Combine(curDic, "images", $"mstscGreen.png"));
                         labelMstsc.Text = "正在运行";
                         labelMstsc.ForeColor = Color.Green;
                     }
                     else
                     {
-                        pictureBoxMstsc.Image = Image.FromFile(Path.Combine(curDic, "images", $"{item.ServeName}Black.png"));
+                        pictureBoxMstsc.Image = Image.FromFile(Path.Combine(curDic, "images", $"mstscBlack.png"));
                         labelMstsc.Text = "已关闭";
                         labelMstsc.ForeColor = Color.Black;
                     }
@@ -105,13 +105,13 @@ namespace TunnelCode
                 {
                     if (item.Enable)
                     {
-                        pictureBoxWeb.Image = Image.FromFile(Path.Combine(curDic, "images", $"{item.ServeName}Green.png"));
+                        pictureBoxWeb.Image = Image.FromFile(Path.Combine(curDic, "images", $"webGreen.png"));
                         labelWeb.Text = "正在运行";
                         labelWeb.ForeColor = Color.Green;
                     }
                     else
                     {
-                        pictureBoxWeb.Image = Image.FromFile(Path.Combine(curDic, "images", $"{item.ServeName}Black.png"));
+                        pictureBoxWeb.Image = Image.FromFile(Path.Combine(curDic, "images", $"webBlack.png"));
                         labelWeb.Text = "已关闭";
                         labelWeb.ForeColor = Color.Black;
                     }
@@ -137,7 +137,6 @@ namespace TunnelCode
                     }
                 }
             }
-           
         }
         
 

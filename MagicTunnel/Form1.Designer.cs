@@ -107,9 +107,8 @@
             this.labelMstsc.Font = new System.Drawing.Font("宋体", 12F);
             this.labelMstsc.Location = new System.Drawing.Point(84, 171);
             this.labelMstsc.Name = "labelMstsc";
-            this.labelMstsc.Size = new System.Drawing.Size(56, 16);
+            this.labelMstsc.Size = new System.Drawing.Size(0, 16);
             this.labelMstsc.TabIndex = 6;
-            this.labelMstsc.Text = "已关闭";
             // 
             // labelWeb
             // 
@@ -117,9 +116,8 @@
             this.labelWeb.Font = new System.Drawing.Font("宋体", 12F);
             this.labelWeb.Location = new System.Drawing.Point(232, 171);
             this.labelWeb.Name = "labelWeb";
-            this.labelWeb.Size = new System.Drawing.Size(56, 16);
+            this.labelWeb.Size = new System.Drawing.Size(0, 16);
             this.labelWeb.TabIndex = 7;
-            this.labelWeb.Text = "已关闭";
             // 
             // timer1
             // 
@@ -131,7 +129,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(372, 262);
             this.Controls.Add(this.labelWeb);
@@ -144,6 +141,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.MaximumSize = new System.Drawing.Size(392, 304);
+            this.MinimumSize = new System.Drawing.Size(392, 304);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "隧道启动程序";
