@@ -37,16 +37,19 @@ namespace MagicTunnelModel
 
         public void DeleteProcess()
         {
-            try
+            if (Enable)
             {
-                //ServeProcess.Close();
-                ServeProcess.Kill();
-                ServeProcess.Dispose();
-                Enable = false;
-            }
-            catch (Exception)
-            {
-                throw;
+                try
+                {
+                    //ServeProcess.Close();
+                    ServeProcess.Kill();
+                    ServeProcess.Dispose();
+                    Enable = false;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
         }
 

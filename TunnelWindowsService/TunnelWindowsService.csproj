@@ -76,8 +76,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MagicTunnBll\MagicTunnelBll.csproj">
-      <Project>{EC378CF1-62C6-4546-BA56-108689644D54}</Project>
+    <ProjectReference Include="..\MagicTunnelBll\MagicTunnelBll.csproj">
+      <Project>{cac84c9d-64f9-48cc-a7ba-74e7befeae93}</Project>
       <Name>MagicTunnelBll</Name>
     </ProjectReference>
   </ItemGroup>

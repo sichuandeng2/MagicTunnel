@@ -68,7 +68,7 @@ namespace MagicTunnBll
                 Process[] processes = Process.GetProcessesByName(item.ServeName);
                 if (processes.Length == 1)
                 {
-                    if (item.ServeProcess==null || item.ServeProcess.HasExited  && processes[0].HasExited)
+                    if (item.Enable==null || !processes[0].HasExited)
                     {
                         item.ServeProcess = processes[0];
                     }
