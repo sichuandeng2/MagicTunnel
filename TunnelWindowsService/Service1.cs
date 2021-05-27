@@ -1,9 +1,6 @@
 ﻿using MagicTunnBll;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.ServiceProcess;
 
@@ -12,29 +9,18 @@ namespace TunnelWindowsService
     public partial class Service1 : ServiceBase
     {
         //获取当前启动路径
-        public static string curDic
-        {
-            get
-            {
-                return AppDomain.CurrentDomain.BaseDirectory;
-            }
-        }
+        public readonly static string curDic = AppDomain.CurrentDomain.BaseDirectory;
 
         //获取服务信息
-        private static string serverInfo
-        {
-            get
-            {
-                return ConfigurationManager.AppSettings.Get("serverInfo");
-            }
-        }
+        private readonly static string serverInfo = ConfigurationManager.AppSettings.Get("serverInfo");
 
         TunnelBll tb = new TunnelBll(serverInfo, curDic);
-        List<Process> MagicProcess = new List<Process>();
+        //List<Process> MagicProcess = new List<Process>();
         public Service1()
         {
             InitializeComponent();
         }
+        // 调试运行
         public void OnDebug()
         {
             string[] str = { "" };
