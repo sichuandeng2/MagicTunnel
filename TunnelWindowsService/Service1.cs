@@ -1,29 +1,27 @@
 ﻿using MagicTunnBll;
-using System;
-using System.Configuration;
 using System.Linq;
 using System.ServiceProcess;
+using TunnelCode;
 
 namespace TunnelWindowsService
 {
-    public partial class Service1 : ServiceBase
+    public partial class Service1: ServiceBase
     {
         //获取当前启动路径
-        public readonly static string curDic = AppDomain.CurrentDomain.BaseDirectory;
+        private readonly static string curDic = Form1.curDic;
 
         //获取服务信息
-        private readonly static string serverInfo = ConfigurationManager.AppSettings.Get("serverInfo");
+        private readonly static string serverInfo = Form1.serverInfo;
 
         TunnelBll tb = new TunnelBll(serverInfo, curDic);
-        //List<Process> MagicProcess = new List<Process>();
-        public Service1()
+        public Service1( )
         {
-            InitializeComponent();
+            InitializeComponent( );
         }
         // 调试运行
-        public void OnDebug()
+        public void OnDebug( )
         {
-            string[] str = { "" };
+            string[] str = {""};
             object serder = null;
             System.Timers.ElapsedEventArgs e = null;
             timer1_Elapsed(serder, e);
@@ -31,22 +29,22 @@ namespace TunnelWindowsService
             OnStart(str);
             timer1_Elapsed(serder, e);
 
-            OnStop();
+            OnStop( );
             timer1_Elapsed(serder, e);
 
         }
 
         protected override void OnStart(string[] args)
         {
-            foreach (string item in tb.GetServeNameList().ToArray<string>())
+            foreach (string item in tb.GetServeNameList( ).ToArray<string>( ))
             {
                 tb.CreatProcess(item);
             }
         }
 
-        protected override void OnStop()
+        protected override void OnStop( )
         {
-            foreach (string item in tb.GetServeNameList().ToArray<string>())
+            foreach (string item in tb.GetServeNameList( ).ToArray<string>( ))
             {
                 tb.DeleteProcess(item);
             }

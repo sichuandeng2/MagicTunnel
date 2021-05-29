@@ -21,7 +21,7 @@ namespace TunnelCode
             } 
         }
         //获取服务信息
-        private static string serverInfo
+        public static string serverInfo
         {
             get
             {

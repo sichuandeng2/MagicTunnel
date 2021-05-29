@@ -80,6 +80,10 @@
       <Project>{cac84c9d-64f9-48cc-a7ba-74e7befeae93}</Project>
       <Name>MagicTunnelBll</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MagicTunnel\MagicTunnel.csproj">
+      <Project>{bfeff935-ff19-4489-8723-d01878228b55}</Project>
+      <Name>MagicTunnel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
